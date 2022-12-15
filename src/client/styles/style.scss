@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;700&family=Lato:wght@300;400;700&family=Poppins:wght@200&family=Yeseva+One&display=swap');
+
+$dark-purple: #582C4D;
+$copper-rose: #A26769;
+$silver-pink: #D5B9B2;
+$bone: #ECE2D0;
+$pale-silver: #BFB5AF;
+
+$josefin: 'Josefin Sans';
+$lato: 'Lato';
+$yeseva: 'Yeseva One';
+$poppins: 'Poppins';
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $josefin;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    background: $dark-purple;
+    
+}
+
+.directions {
+    text-align: center;
+    width: 70%;
+}
+
+#app-wrapper {
+    
+    display: flex;
+    justify-content: center;
+   
+
+    //background: red;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    background: $pale-silver;
+    align-items:center;
+    justify-content: space-evenly;
+    width: 50%;
+    border-radius: 5px;
+   // box-shadow: 8px 6px $bone;
+    border: 5px $copper-rose solid;
+    min-height: 800px;
+    padding: .5rem;
+
+
+    
+}
+
+#fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   // color: $copper-rose;
+   // height: 50px;
+   // background: red;
+    
+    
+}
+
+#label {
+    
+    font-size: 2rem;
+   // background: red;
+   
+}
+   
+#generate {
+    width: 10rem;
+    height: 5rem;
+    font-family: 'Josefin Sans';
+    font-size: 1.5rem;
+    background: none;
+    border: solid $dark-purple 2px;
+    color: $dark-purple;
+    margin-top:3rem;
+}
+
+#generate:hover {
+    cursor: pointer;
+    background: $copper-rose;
+}
+
+
+
+.app-headline {
+    font-family: $yeseva;
+    color: $bone;
+    font-size: 7rem;
+    text-align: center;
+}
+
+.recent-entry {
+    font-family: $yeseva;
+    letter-spacing: .2rem;
+    color: $copper-rose;
+    font-size: 3rem;
+  
+}
+
+.entry {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.entry-holder {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.entry-box {
+    height: 3.2rem;
+    background:$dark-purple;
+    border: black solid 2px;
+    color: $pale-silver;
+    width:22rem;
+    font-family: $josefin;
+    font-weight: 300;
+    font-size: 1.6rem;
+    padding: .5rem;
+
+}
+
+.holder {
+    margin-top: 3rem;
+}
+
+#photo {
+    height: 300px;
+}
+
+@media screen and (max-width: 950px) {
+    #photo {
+        height: 200px;
+    }
+
+    #app {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .app-headline {
+        font-size: 5rem;
+    }
+
+    .entry-box {
+        width: 18rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+
+
+    #app {
+        width: 76%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    #photo {
+        height: 80px;
+    }
+}
+

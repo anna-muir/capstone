@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Journal</title>
+        
+    </head>
+    <body>
+
+        <h1 class="app-headline">Travel Journal</h1>
+        <div id="app-wrapper">
+        <div id="app">
+            
+            <div class="directions">
+            Enter destination and departure date to get your trip information. Note: Destination location and departure date are 
+            format-sensitive. Please follow suggest format. The date entered must be within 16 days from today.</div>
+            <div id="fields">
+                
+                <div class="holder">
+                    <label for="zipcode" class="zipcode" id="label">Enter Destination</label> </div>
+                    <input type="text" id="city" class="entry-box" placeholder="city, state (do not abbreviate">
+
+                    <div class="holder">
+                        <label for="date" class="date" id="label">Enter Arrival Date</label> </div>
+                        <input type="text" id="date" class="entry-box" placeholder="yyyy-mm-dd">
+                 
+
+                    <div class="holder">
+                        <label for="end-date" class="end-date" id="label">Enter Departure Date</label> </div>
+                        <input type="text" id="end-date" class="entry-box" placeholder="yyyy-mm-dd">
+                    </div>
+
+
+                    
+
+               
+                
+            <button id="generate" type = "submit"> 
+                Submit </button>
+
+        
+
+        <div class="entry-holder">
+            <h1 class="recent-entry">Trip Info</h1>
+            <div id="countdown" class="entry"></div>
+            <div id="location" class="entry"></div>
+            <div id="dateUI" class="entry"></div>
+            <div id="length" class="entry"></div>
+            <div id="high" class="entry"></div>
+            <div id="low" class="entry"></div>
+            <div id="des" class="entry"></div>
+            <div id="photoContainer" class="entry">
+                <img id="photo" src="">
+            </div>
+            
+            
+
+        </div>
+    </div>
+
+    </div>
+  
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+       </script>
+       
+    </body>
+</html>
