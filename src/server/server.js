@@ -53,7 +53,7 @@ app.get('/history', (req, res) => {
 })
 
 // Geonames API call
-app.get('/geonames/:place', async (req, res) => {
+const get = app.get('/geonames/:place', async (req, res) => {
     const place = req.params.place;
     const enteredPlace = place;
     const geonameKey = process.env.GEONAME_API_KEY;
@@ -85,3 +85,9 @@ app.get('/weather/:latlon', async (req, res) => {
     res.json(weatherData);
 
 })
+
+
+
+module.exports = {
+    get
+}
